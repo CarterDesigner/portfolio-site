@@ -53,15 +53,16 @@ options.forEach((option) => {
 
 
 const navigation = document.querySelector('.navigation');
+const root = document.documentElement;
 window.addEventListener('scroll', () => {
     let scrollThreshold = window.innerHeight * 0.1;
     let scrollDistance = window.scrollY;
     if (scrollDistance > scrollThreshold) {
         navigation.style.backgroundColor = 'rgb(20, 20, 20)';
-        navigation.style.borderBottom = 'solid 2px #00b4d8';
+        root.style.setProperty('--navbar-border-bottom-width', '100%');
     } else {
         navigation.style.backgroundColor = 'transparent';
-        navigation.style.borderBottom = 'none';
+        root.style.setProperty('--navbar-border-bottom-width', '0');
     }
 });
 

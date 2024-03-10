@@ -1,3 +1,6 @@
+:root {
+    --navbar-border-bottom-width: 0;
+}
 html {
     width: 100vw;
     min-height: 100vh;
@@ -86,6 +89,17 @@ html {
         align-items: center;
         justify-content: space-between;
         padding: 0 20px;
+        position: relative;
+    }
+    .navigation .navigation-container:after {
+        content: "";
+        width: var(--navbar-border-bottom-width);
+        height: 2px;
+        background-color: #00b4d8;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .3s ease;
     }
         .navigation .navigation-container .logo {
             width: auto;
