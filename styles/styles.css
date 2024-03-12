@@ -1,5 +1,9 @@
 :root {
     --navbar-border-bottom-width: 0;
+    --main-title-line-top-width: 0;
+    --main-title-line-right-height: 0;
+    --main-title-line-bottom-width: 0;
+    --main-title-line-left-height: 0;
 }
 html {
     width: 100vw;
@@ -99,7 +103,7 @@ html {
         position: absolute;
         bottom: 0;
         left: 0;
-        transition: .3s ease;
+        transition: .6s ease;
     }
         .navigation .navigation-container .logo {
             width: auto;
@@ -252,10 +256,10 @@ html {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                margin: 30px 0;
+                margin: 20px 0;
             }
                 .hero .hero-container .title .title-line:nth-child(2) {
-                    margin: 20px 0;
+                    margin: 0 0;
                 }
                 .hero .hero-container .title .title-line span {
                     color: white;
@@ -266,16 +270,12 @@ html {
                     font-size: 45px;
                 }
                 .hero .hero-container .title .title-line:nth-child(2) span {
-                    position: absolute;
+                    display: block;
+                    position: relative;
                     font-size: 90px;
                     text-align: center;
+                    padding: 10px 15px;
                 }
-                    .hero .hero-container .title .title-line:nth-child(2) span:nth-child(1) {
-                        display: block;
-                    }
-                    .hero .hero-container .title .title-line:nth-child(2) span:nth-child(2) {
-                        display: none;
-                    }
                 .hero .hero-container .title .title-line:nth-child(3) a {
                     position: relative;
                     padding: 1rem 2rem 0.5rem 2.5rem;
@@ -448,7 +448,7 @@ html {
             justify-content: space-between;
             margin: auto;
         }
-        .portfolio .portfolio-container .project-card:not(:second-child) {
+        .portfolio .portfolio-container .project-card:not(:nth-child(2), :nth-child(3)) {
             display: none;
         }
             .portfolio .portfolio-container .project-card .text {

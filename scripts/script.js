@@ -49,8 +49,7 @@ options.forEach((option) => {
         dropBtn.classList.remove('is-active');
         document.getElementsByTagName('html')[0].style.overflowY = 'scroll';
     })
-})
-
+});
 
 const navigation = document.querySelector('.navigation');
 const root = document.documentElement;
@@ -64,12 +63,6 @@ window.addEventListener('scroll', () => {
         navigation.style.backgroundColor = 'transparent';
         root.style.setProperty('--navbar-border-bottom-width', '0');
     }
-});
-
-const portCard1 = document.querySelector('.portfolio-container .project-card')[0];
-const portCard2 = document.querySelector('.portfolio-container .project-card')[1];
-window.addEventListener('scroll', () => {
-    
 });
 
 const earth3D = document.querySelector('.wc-container .D-back');
