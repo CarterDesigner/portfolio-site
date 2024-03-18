@@ -594,6 +594,7 @@ html {
                 padding: 0;
                 cursor: pointer;
                 position: relative;
+                text-decoration: none;
             }
             .portfolio .portfolio-container .see-more .btn:after {
                 content: "";
@@ -635,6 +636,7 @@ html {
             align-items: center;
             justify-content: center;
             top: 20px;
+            transition: .01s;
         }
             .WCID .wc-container .D-back canvas {
                 width: 100%;
