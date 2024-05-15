@@ -13,8 +13,31 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      width: {
+        "70": "70%",
+      },
+      height: {
+        "100px": "100px",
+      },
+      top: {
+        "10": "10px",
+      },
+      left: {
+        "0": "0",
+      },
+      borderRadius: {
+        "100px": "100px",
+      },
+      aspectRatio: {
+        "box": "1",
+      },
+      paddingX: {
+        "15": "15px",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
 export default config;
