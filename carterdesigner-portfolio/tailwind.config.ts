@@ -18,6 +18,7 @@ const config: Config = {
       },
       height: {
         "100px": "100px",
+        "98": "98%",
       },
       top: {
         "10": "10px",
@@ -29,15 +30,25 @@ const config: Config = {
         "100px": "100px",
       },
       aspectRatio: {
-        "box": "1",
+        box: "1",
       },
       paddingX: {
         "15": "15px",
       },
+      fontSize: {
+        "50": "50px",
+      },
+      gap: {
+        "20px": "20px",
+      },
+      translate: {
+        "10px": "10px",
+      },
+      animationDelay: {
+        "5s": "5s",
+      },
     },
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };
 export default config;

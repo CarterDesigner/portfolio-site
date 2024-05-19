@@ -37,7 +37,7 @@ body {
   bottom: 0;
   left: auto;
   right: 0;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 .navigation a:hover span::after {
   width: 100%;
@@ -58,11 +58,40 @@ body {
 }
 .tile {
   background-color: var(--theme-color-5);
+  transition: 0.3s ease;
+}
+.tile:hover {
+  background-color: var(--theme-color-1);
+  transition: 0s;
 }
 .hero {
-  background: linear-gradient(to right, var(--theme-color-2) 50%, var(--theme-color-1) 65%, var(--theme-color-2) 80%);
+  background: linear-gradient(
+    to right,
+    var(--theme-color-2) 50%,
+    var(--theme-color-1) 65%,
+    var(--theme-color-2) 80%
+  );
   background-size: 200%;
   animation: heroBackPan 6s linear infinite;
+}
+.hero-container {
+  transform: translateZ(1px);
+}
+.adbar .adbar-content {
+  animation: adbarScroll 20s linear infinite;
+  transform: translateX(200%);
+  animation-delay: -10s;
+}
+.adbar .adbar-content:nth-child(2) {
+  animation-delay: 0s;
+}
+@keyframes adbarScroll {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
 }
 @keyframes heroBackPan {
   from {
@@ -81,5 +110,13 @@ body {
   }
   .navigation .drop-btn {
     display: none;
+  }
+  @keyframes adbarScroll {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
 }
