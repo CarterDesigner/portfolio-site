@@ -19,6 +19,11 @@ function AdbarContent() {
           logo deign
         </h1>
       </div>
+      <div className="adbar-title h-full flex items-center justify-center">
+        <h1 className="uppercase text-white text-50 whitespace-nowrap">
+          @BCarterDesigner
+        </h1>
+      </div>
     </div>
   );
 }

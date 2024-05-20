@@ -1,14 +1,17 @@
 "use client";
 import React from "react";
 
-function Title() {
-  return <h1>Carter Designer</h1>;
-}
-
 export default function HeroTitle() {
   return (
-    <div className="hero-title">
-      <div className="title-line"></div>
+    <div className="hero-title w-screen h-auto">
+      <div className="title-line w-min-content h-auto flex items-center justify-center">
+        <h1 className="text-white uppercase text-55 whitespace-nowrap select-none">
+          Carter Designer
+        </h1>
+      </div>
+      <div className="title-line w-auto h-auto">
+        <span className="uppercase text-white text-25"></span>
+      </div>
     </div>
   );
 }

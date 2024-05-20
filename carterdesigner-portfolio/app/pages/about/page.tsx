@@ -4,11 +4,8 @@ import GridBackground from "../../ui/gridBackground";
 
 export default function Portfolio() {
   return (
-    <div className="content w-screen min-h-screen">
-      <div className="background w-full h-full">
-        <GridBackground />
-      </div>
-      <h1 className="text-white">about</h1>
+    <div className="content w-screen min-h-screen translate-z-1">
+      <h1>About</h1>
     </div>
   );
 }

@@ -15,6 +15,7 @@ const config: Config = {
       },
       width: {
         "70": "70%",
+        "min-content": "min-content",
       },
       height: {
         "100px": "100px",
@@ -32,11 +33,16 @@ const config: Config = {
       aspectRatio: {
         box: "1",
       },
+      padding: {
+        "10": "10%",
+      },
       paddingX: {
         "15": "15px",
       },
       fontSize: {
+        "25": "25px",
         "50": "50px",
+        "55": "55px",
       },
       gap: {
         "20px": "20px",
