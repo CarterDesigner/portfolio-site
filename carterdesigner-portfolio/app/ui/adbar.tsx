@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { adbarScript } from "../scripts/adbar";
 
 function AdbarContent() {
   return (
@@ -16,7 +15,7 @@ function AdbarContent() {
       </h1>
       <div className="adbar-title h-full flex items-center justify-center">
         <h1 className="uppercase text-white text-50 whitespace-nowrap">
-          logo deign
+          follow
         </h1>
       </div>
       <div className="adbar-title h-full flex items-center justify-center">
@@ -28,9 +27,6 @@ function AdbarContent() {
   );
 }
 export default function Adbar() {
-  useEffect(() => {
-    adbarScript();
-  }, []);
   return (
     <div className="adbar w-screen h-100px flex items-center justify-center relative">
       <AdbarContent />

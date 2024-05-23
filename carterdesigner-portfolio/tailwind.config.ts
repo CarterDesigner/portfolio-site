@@ -22,6 +22,7 @@ const config: Config = {
         "98": "98%",
       },
       top: {
+        "1/2": "50%",
         "10": "10px",
       },
       left: {
@@ -38,13 +39,18 @@ const config: Config = {
       },
       paddingX: {
         "15": "15px",
+        "20": "20px",
       },
       fontSize: {
+        "20": "20px",
         "25": "25px",
+        "30": "30px",
+        "40": "40px",
         "50": "50px",
         "55": "55px",
       },
       gap: {
+        "5px": "5px",
         "20px": "20px",
       },
       translate: {

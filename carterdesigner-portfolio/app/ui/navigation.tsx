@@ -6,12 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/logo.png";
 import { useEffect } from "react";
-import { dropbtnScript } from "../scripts/dropbtn";
 
 function Dropbtn() {
-  useEffect(() => {
-    dropbtnScript();
-  }, []);
   return (
     <div className="drop-btn w-auto h-full items-center">
       <div className="hamburger hamburger--spin">
@@ -35,13 +31,18 @@ function Navbtns() {
           <span className="uppercase relative">portfolio</span>
         </Link>
       </div>
+      <div className="link w-auto h-auto">
+        <Link href="../pages/contact" className="w-auto h-auto no-underline">
+          <span className="uppercase relative">contact</span>
+        </Link>
+      </div>
     </div>
   );
 }
 
 export default function Navigation() {
   return (
-    <div className="navigation w-screen h-100px flex items-center justify-center fixed top-10 left-0 z-[5] pointer-events-none">
+    <div className="navigation w-screen h-100px flex items-center justify-center fixed top-5 left-0 z-[5] pointer-events-none">
       <div className="navigation-container h-full flex flex-row items-center justify-between border border-solid border-white rounded-100px px-5 py-0 pointer-events-auto">
         <div className="logo h-98 aspect-box flex items-center justify-center rounded-full overflow-hidden border-2 border-solid border-white">
           <Link href="/" className="w-full h-full">

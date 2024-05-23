@@ -8,7 +8,7 @@ export default function GridBackground() {
     gridBackgroundScript();
   }, []);
   return (
-    <div className="grid-back w-screen h-screen absolute top-0 left-0">
+    <div className="grid-back w-screen h-full absolute top-0 left-0">
       <div className="tiles w-full h-full grid"></div>
     </div>
   );

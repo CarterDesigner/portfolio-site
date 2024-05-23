@@ -8,7 +8,7 @@ export default function GridCover() {
     gridCoverScript();
   }, []);
   return (
-    <div className="grid-cover w-full h-full absolute top-0 left-0">
+    <div className="grid-cover w-full h-full absolute top-0 left-0 pointer-events-none">
       <div className="tiles w-full h-full grid"></div>
     </div>
   );
