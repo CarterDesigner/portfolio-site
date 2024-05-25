@@ -4,7 +4,11 @@ import React from "react";
 import { useEffect } from "react";
 import { textFromBottomScript } from "../scripts/textAnimations";
 
-export default function CtaSections({ title }) {
+interface CtaSectionProps {
+  title: string;
+}
+
+const CtaSections: React.FC<CtaSectionProps> = ({ title }) => {
   useEffect(() => {
     textFromBottomScript();
     const handleScrollOrResize = () => {
@@ -78,4 +82,6 @@ export default function CtaSections({ title }) {
     }
   };
   return renderContent();
-}
+};
+
+export default CtaSections;

@@ -14,10 +14,14 @@ import SkillsGrid from "./ui/skills grid/skillsGrid";
 import { textFromLeftScript } from "./scripts/textAnimations";
 import { textFromRightScript } from "./scripts/textAnimations";
 import { textFromBottomScript } from "./scripts/textAnimations";
-import { useEffect } from "react";
+import { useEffect, ReactNode } from "react";
 import Footer from "./ui/footer/footer";
 
-function ListItem({ children }) {
+interface ListItemProps {
+  children: ReactNode;
+}
+
+const ListItem: React.FC<ListItemProps> = ({ children }) => {
   useEffect(() => {
     textFromLeftScript();
     const handleScrollResize = () => {
@@ -36,7 +40,7 @@ function ListItem({ children }) {
       <span className="uppercase text-white text-18">{children}</span>
     </div>
   );
-}
+};
 
 export default function Home() {
   return (
@@ -73,14 +77,10 @@ export default function Home() {
             <Title title="portfolio" />
           </div>
           <div className="port-content w-full h-auto flex-col items-center">
-            <PortCard
-              props={{ title: "rayyan", tags: "portfolio | video editor" }}
-            />
-            <PortCard
-              props={{ title: "guilherme", tags: "portfolio | video editor" }}
-            />
-            <PortCard props={{ title: "coming soon", tags: "" }} />
-            <PortCard props={{ title: "coming soon", tags: "" }} />
+            <PortCard title="rayyan" tags="portfolio | video editor" />
+            <PortCard title="guilherme" tags="portfolio | video editor" />
+            <PortCard title="coming soon" tags="" />
+            <PortCard title="coming soon" tags="" />
           </div>
         </div>
       </div>

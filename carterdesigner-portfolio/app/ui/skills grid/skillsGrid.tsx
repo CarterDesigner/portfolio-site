@@ -6,7 +6,11 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { skillImagesScript } from "../../scripts/skillImages";
 
-function SkillItem({ title }) {
+interface SkillItemProps {
+  title: string;
+}
+
+const SkillItem: React.FC<SkillItemProps> = ({ title }) => {
   useEffect(() => {
     skillImagesScript();
     const handleScrollResize = () => {
@@ -35,7 +39,7 @@ function SkillItem({ title }) {
       </div>
     </div>
   );
-}
+};
 
 export default function SkillsGrid() {
   return (

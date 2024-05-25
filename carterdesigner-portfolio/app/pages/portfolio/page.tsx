@@ -31,14 +31,10 @@ export default function Portfolio() {
       </div>
       <div className="portfolio-content w-screen min-h-screen">
         <div className="portfolio-grid w-full h-auto flex-col items-center justify-center">
-          <PortCard
-            props={{ title: "rayyan", tags: "portfolio | video editor" }}
-          />
-          <PortCard
-            props={{ title: "guilherme", tags: "portfolio | video editor" }}
-          />
-          <PortCard props={{ title: "coming soon", tags: "" }} />
-          <PortCard props={{ title: "coming soon", tags: "" }} />
+          <PortCard title="rayyan" tags="portfolio | video editor" />
+          <PortCard title="guilherme" tags="portfolio | video editor" />
+          <PortCard title="coming soon" tags="" />
+          <PortCard title="coming soon" tags="" />
         </div>
       </div>
       <Footer />
