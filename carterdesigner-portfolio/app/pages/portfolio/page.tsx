@@ -17,7 +17,7 @@ export default function Portfolio() {
         <GridBackground />
         <div className="hero-container w-full h-full flex flex-col items-center justify-center relative">
           <div className="title w-full h-auto flex flex-col items-center">
-            <div className="title-main w-auto h-auto">
+            <div className="title-main w-full h-auto">
               <HeroTitle title="portfolio" />
               <span className="sub-title w-full block h-auto text-35 text-white uppercase">
                 A catalogue of my projects
