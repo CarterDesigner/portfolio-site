@@ -77,10 +77,18 @@ export default function Home() {
             <Title title="portfolio" />
           </div>
           <div className="port-content w-full h-auto flex-col items-center">
-            <PortCard title="rayyan" tags="portfolio | video editor" />
-            <PortCard title="guilherme" tags="portfolio | video editor" />
-            <PortCard title="coming soon" tags="" />
-            <PortCard title="coming soon" tags="" />
+            <a href="pages/portfolio">
+              <PortCard title="rayyan" tags="portfolio | video editor" />
+            </a>
+            <a href="pages/portfolio">
+              <PortCard title="guilherme" tags="portfolio | video editor" />
+            </a>
+            <a href="pages/portfolio">
+              <PortCard title="coming soon" tags="" />
+            </a>
+            <a href="pages/portfolio">
+              <PortCard title="coming soon" tags="" />
+            </a>
           </div>
         </div>
       </div>
