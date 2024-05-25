@@ -164,6 +164,9 @@ body {
   left: 0;
   right: auto;
 }
+.title-main .sub-title {
+  text-align: center;
+}
 .portfolio-container {
   background: linear-gradient(
     to bottom,
@@ -182,7 +185,8 @@ body {
 .gridCoverTileDisappear {
   animation: gridCoverTileDisappear 1s ease forwards;
 }
-.cta-section {
+.cta-section,
+.services {
   background-color: var(--theme-color-4);
   padding: 0 2%;
 }
@@ -210,6 +214,24 @@ body {
   top: 0;
   bottom: auto;
   height: 0;
+}
+.services-content {
+  flex-direction: column;
+}
+.text-left,
+.text-right,
+.text-bottom {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.text-left {
+  transform: translateX(-50px);
+}
+.text-right {
+  transform: translateX(50px);
+}
+.text-bottom {
+  transform: translateY(50px);
 }
 @keyframes mainCtaBtnGradPan {
   from {
@@ -272,6 +294,9 @@ body {
     column-gap: 50px;
     justify-content: center;
   }
+  .title-main .sub-title {
+    text-align: left;
+  }
   .portfolio-container {
     padding: 0 50px;
   }
@@ -279,8 +304,13 @@ body {
     display: grid;
     grid-template: ". ." / 50% 50%;
   }
-  .cta-section {
+  .cta-section,
+  .services {
     padding: 0 20%;
+  }
+  .services-content {
+    flex-direction: row;
+    justify-content: space-between;
   }
   @keyframes adbarScroll {
     from {

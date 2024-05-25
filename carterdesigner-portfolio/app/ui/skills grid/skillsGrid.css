@@ -1,0 +1,43 @@
+.skills-grid {
+  grid-template: ". . ." / auto auto auto;
+  gap: 3px;
+}
+.skills-grid .grid-item {
+}
+.skills-grid .skill {
+  filter: grayscale(100%);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+.skills-grid .skill:hover {
+  filter: grayscale(0%);
+}
+.skill-image {
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+.skills-grid .html {
+  background: linear-gradient(135deg, #ad5d2b 5%, #3d1f0c 50%);
+}
+.skills-grid .react {
+  background: linear-gradient(135deg, #2a647b 10%, #1a3f4d 35%);
+}
+.skills-grid .next {
+  background: linear-gradient(135deg, #505050 10%, #000 35%);
+}
+.skills-grid .typescript {
+  background: linear-gradient(135deg, #009387 1%, #004b44 25%);
+}
+.skills-grid .tailwind {
+  background: #000037;
+}
+.skills-grid .emotion {
+  background: #5e0051;
+}
+.skills-grid .stripe {
+  background: #5433ff;
+}
+.skills-grid .item-stripe {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}

@@ -16,10 +16,13 @@ const config: Config = {
       width: {
         "70": "70%",
         "min-content": "min-content",
+        "70px": "70px",
+        "150px": "150px",
       },
       height: {
         "100px": "100px",
         "98": "98%",
+        "70px": "70px",
       },
       top: {
         "1/2": "50%",
@@ -38,13 +41,17 @@ const config: Config = {
         "10": "10%",
       },
       paddingX: {
+        "10": "10px",
         "15": "15px",
         "20": "20px",
+        "10P": "10%",
       },
       fontSize: {
+        "18": "18px",
         "20": "20px",
         "25": "25px",
         "30": "30px",
+        "35": "35px",
         "40": "40px",
         "50": "50px",
         "55": "55px",

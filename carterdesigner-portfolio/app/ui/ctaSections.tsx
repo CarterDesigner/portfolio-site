@@ -1,36 +1,62 @@
 "use client";
 
 import React from "react";
+import { useEffect } from "react";
+import { textFromBottomScript } from "../scripts/textAnimations";
 
 export default function CtaSections({ title }) {
+  useEffect(() => {
+    textFromBottomScript();
+    const handleScrollOrResize = () => {
+      textFromBottomScript();
+    };
+    window.addEventListener("scroll", handleScrollOrResize);
+    window.addEventListener("resize", handleScrollOrResize);
+    return () => {
+      window.removeEventListener("scroll", handleScrollOrResize);
+      window.removeEventListener("resize", handleScrollOrResize);
+    };
+  }, []);
   const renderContent = () => {
     switch (title) {
       case "cta1":
         return (
           <div className="cta-text w-full h-auto text-center flex flex-col gap-5px">
-            <span className="uppercase text-white text-20">
-              a website will build trust in your clients.
+            <span className="uppercase text-white text-20 text-bottom">
+              Why do you need a website? You tell me.
             </span>
-            <span className="uppercase text-white text-20">
-              no one will scroll through your social media account looking for
-              past work amongst other posts.
+            <span className="uppercase text-white text-20 text-bottom">
+              If you&#39;re trying to sell something who will people trust more?
             </span>
-            <span className="uppercase text-white text-20">
-              websites provide ease of access to your quality work.
+            <br />
+            <span className="uppercase text-white text-20 text-bottom">
+              The mofo without a website?
+              <br />
+              Or the guy with a website showing their value and abilities off as
+              well as solidifying their brand?
+            </span>
+            <br />
+            <span className="uppercase text-white text-20 text-bottom">
+              Now tell me, who&#39;s going to be pulling more clients and
+              securing more sales?
             </span>
           </div>
         );
       case "cta2":
         return (
           <div className="cta-text w-full h-auto text-center flex flex-col gap-5px">
-            <span className="uppercase text-white text-20">
-              your website needs to represent you.
+            <span className="uppercase text-white text-20 text-bottom">
+              Do you want a generic website?
+              <br />
+              Or do you want to stand out?
             </span>
-            <span className="uppercase text-white text-20">
-              your work needs to be associated with you.
+            <br />
+            <span className="uppercase text-white text-20 text-bottom">
+              Do you want to be eaily memorable to people?
             </span>
-            <span className="uppercase text-white text-20">
-              so you need to be memorable.
+            <br />
+            <span className="uppercase text-white text-20 text-bottom">
+              Emphasise your brand and value to people through your website.
             </span>
           </div>
         );

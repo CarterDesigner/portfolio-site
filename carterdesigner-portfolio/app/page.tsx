@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import GridBackground from "./ui/gridBackground";
@@ -7,6 +9,34 @@ import Adbar from "./ui/adbar";
 import Title from "./ui/titles";
 import PortCard from "./ui/portfolio cards/portCards";
 import CtaSections from "./ui/ctaSections";
+import LightningIcon from "./ui/lightningIcon";
+import SkillsGrid from "./ui/skills grid/skillsGrid";
+import { textFromLeftScript } from "./scripts/textAnimations";
+import { textFromRightScript } from "./scripts/textAnimations";
+import { textFromBottomScript } from "./scripts/textAnimations";
+import { useEffect } from "react";
+import Footer from "./ui/footer/footer";
+
+function ListItem({ children }) {
+  useEffect(() => {
+    textFromLeftScript();
+    const handleScrollResize = () => {
+      textFromLeftScript();
+    };
+    window.addEventListener("scroll", handleScrollResize);
+    window.addEventListener("resize", handleScrollResize);
+    return () => {
+      window.removeEventListener("scroll", handleScrollResize);
+      window.removeEventListener("resize", handleScrollResize);
+    };
+  }, []);
+  return (
+    <div className="w-auto h-10 flex flex-row items-center px-2 text-left">
+      <LightningIcon />
+      <span className="uppercase text-white text-18">{children}</span>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -15,9 +45,8 @@ export default function Home() {
         <GridBackground />
         <div className="hero-container w-full h-full flex flex-col items-center justify-center relative">
           <div className="title w-full h-auto flex flex-col items-center">
-            <div className=""></div>
             <div className="title-main w-auto h-auto">
-              <HeroTitle />
+              <HeroTitle title="Carter Designer" />
               <div className="cta-btns h-auto flex flex-row">
                 <div className="btn w-auto h-auto border border-solid border-2 px-7 py-4">
                   <Link className="" href="./pages/portfolio">
@@ -50,12 +79,8 @@ export default function Home() {
             <PortCard
               props={{ title: "guilherme", tags: "portfolio | video editor" }}
             />
-            <PortCard
-              props={{ title: "item", tags: "portfolio | local business" }}
-            />
-            <PortCard props={{ title: "item", tags: "store | ecommerce" }} />
-            <PortCard props={{ title: "item", tags: "store | ecommerce" }} />
-            <PortCard props={{ title: "item", tags: "store | ecommerce" }} />
+            <PortCard props={{ title: "coming soon", tags: "" }} />
+            <PortCard props={{ title: "coming soon", tags: "" }} />
           </div>
         </div>
       </div>
@@ -75,8 +100,42 @@ export default function Home() {
         </div>
       </div>
       <div className="services w-screen min-h-screen">
-        <div className="services-container w-full min-h-screen flex flex-col"></div>
+        <div className="services-container w-full min-h-screen flex flex-col align-items-center justify-center">
+          <div className="title w-full h-auto flex justify-center">
+            <Title title="what i can do" />
+          </div>
+          <div className="services-content w-full h-auto flex">
+            <div className="service-list w-full h-auto flex flex-col">
+              <h2 className="text-20 uppercase text-white underline">
+                Web Development
+              </h2>
+              <ListItem>fully customised website</ListItem>
+              <ListItem>Portfolios | Landing Pages</ListItem>
+              <ListItem>Animations | 3D Models | Responsive Layouts</ListItem>
+              <ListItem>
+                <strong>and more!</strong>
+              </ListItem>
+            </div>
+            <SkillsGrid />
+          </div>
+        </div>
       </div>
+      <div className="cta-section w-screen min-h-screen">
+        <div className="cta-section-container w-full min-h-screen flex flex-col items-center justify-center">
+          <div className="title w-full h-auto flex justify-center my-5">
+            <Title title="personalise your website" />
+          </div>
+          <CtaSections title="cta2" />
+          <div className="cta-btn w-auto h-auto my-10">
+            <Link href="./pages/contact" className="no-underline relative">
+              <h1 className="text-white text-25 uppercase px-3 py-2 border border-solid border-2 relative font-bold">
+                personalise your website
+              </h1>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
