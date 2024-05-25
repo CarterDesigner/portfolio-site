@@ -1,0 +1,45 @@
+.portfolio-card {
+  position: relative;
+  min-height: 150px;
+}
+.portfolio-card:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.2;
+  transition: 0.3s ease;
+}
+.portfolio-card:hover:before {
+  filter: grayscale(0%);
+  background-size: 130%;
+}
+.portfolio-card .title,
+.desc {
+  text-shadow: 0 0 7px black;
+  z-index: 1;
+}
+.portfolio-card .title {
+  flex-direction: column;
+}
+/* different card styles */
+.rayyan:before {
+  background-image: url("../../../public/rayyan-website.png");
+}
+.guilherme:before {
+  background-image: url("../../../public/guilherme-website.png");
+}
+
+/* ---------- */
+@media screen and (min-width: 900px) {
+  .portfolio-card .tags {
+    padding-left: 20px;
+  }
+}

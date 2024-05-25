@@ -1,0 +1,14 @@
+.contact-content {
+  background: linear-gradient(
+    to bottom,
+    var(--theme-color-3) 60%,
+    var(--theme-color-4) 100%
+  );
+  padding: 0 2%;
+}
+
+@media screen and (min-width: 900px) {
+  .contact-content {
+    padding: 0 10%;
+  }
+}
