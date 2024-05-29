@@ -278,7 +278,7 @@ body {
   }
 }
 @media screen and (max-width: 500px) {
-  .navigation {
+  .navigation-container {
     background-color: #000;
   }
   .hero-title {
