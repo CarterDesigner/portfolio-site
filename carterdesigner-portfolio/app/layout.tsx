@@ -3,6 +3,7 @@ import Head from "next/head";
 import "./globals.css";
 import Navigation from "./ui/navigation";
 import { roboto } from "./ui/font";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "WEB DEVELOPER",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Navigation />
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }
