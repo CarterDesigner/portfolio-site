@@ -43,7 +43,7 @@ const SkillItem: React.FC<SkillItemProps> = ({ title }) => {
 
 export default function SkillsGrid() {
   return (
-    <div className="skills-grid w-auto h-auto grid">
+    <div className="skills-grid w-auto h-auto grid mt-5">
       <SkillItem title="html" />
       <SkillItem title="react" />
       <SkillItem title="next" />

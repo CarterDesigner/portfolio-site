@@ -15,7 +15,7 @@ const PortCard: React.FC<PortCardProps> = ({ title, tags }) => {
     >
       <div className={`title w-full h-auto flex items-center px-5`}>
         <h1 className="uppercase text-white text-40 underline">{title}</h1>
-        <span className="tags uppercase text-white text-25">{tags}</span>
+        <span className="tags uppercase text-white text-25 text-center">{tags}</span>
       </div>
     </div>
   );

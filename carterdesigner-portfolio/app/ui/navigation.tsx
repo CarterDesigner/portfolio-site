@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/logo.png";
 import { useEffect } from "react";
+import { HamburgerBtn } from "../scripts/dropbtn";
 
 function Dropbtn() {
   return (
@@ -41,6 +42,12 @@ function Navbtns() {
 }
 
 export default function Navigation() {
+  useEffect(() => {
+    const cleanupDropBtn = HamburgerBtn();
+    return () => {
+      if (cleanupDropBtn) cleanupDropBtn();
+    };
+  }, []);
   return (
     <div className="navigation w-screen h-100px flex items-center justify-center fixed top-5 left-0 z-[5] pointer-events-none">
       <div className="navigation-container h-full flex flex-row items-center justify-between border border-solid border-white rounded-100px px-5 py-0 pointer-events-auto">

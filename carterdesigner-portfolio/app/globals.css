@@ -111,6 +111,7 @@ body {
 .hero-title .title-line:nth-child(1) h1 {
   position: relative;
   font-weight: 700;
+  text-shadow: 0 0 10px black;
 }
 .hero-title .title-line:nth-child(1) h1:after {
   content: "";
@@ -233,6 +234,9 @@ body {
 .text-bottom {
   transform: translateY(50px);
 }
+.list-item {
+  display: flex;
+}
 @keyframes mainCtaBtnGradPan {
   from {
     background-position: 0% center;
@@ -273,6 +277,27 @@ body {
     background-position: -200% center;
   }
 }
+@media screen and (max-width: 500px) {
+  .hero-title {
+    width: 100%;
+  }
+  .hero-title h1 {
+    font-size: 40px;
+  }
+  .cta-btns {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .adbar-content .adbar-title:nth-child(4) {
+    display: none;
+  }
+  .adbar-content .divider {
+    display: none;
+  }
+  .list-item:nth-child(4) {
+    display: none;
+  }
+}
 @media screen and (min-width: 900px) {
   .navigation .navigation-container {
     width: 70%;
@@ -296,6 +321,9 @@ body {
   }
   .title-main .sub-title {
     text-align: left;
+  }
+  .adbar-content .adbar-title:nth-child(4) {
+    display: none;
   }
   .portfolio-container {
     padding: 0 50px;
@@ -324,5 +352,11 @@ body {
 @media screen and (min-width: 1080px) {
   .adbar-content .adbar-title:nth-child(3) {
     display: flex;
+  }
+  .adbar-content .adbar-title:nth-child(4) {
+    display: flex;
+  }
+  .adbar-content .adbar-title:nth-child(5) {
+    display: none;
   }
 }

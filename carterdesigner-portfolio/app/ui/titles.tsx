@@ -7,7 +7,7 @@ interface TitleProps {
 }
 
 const Title: React.FC<TitleProps> = (props) => {
-  return <h1 className="uppercase text-white text-30">{props.title}</h1>;
+  return <h1 className="uppercase text-white text-30 text-center">{props.title}</h1>;
 };
 
 export default Title;

@@ -35,9 +35,9 @@ const ListItem: React.FC<ListItemProps> = ({ children }) => {
     };
   }, []);
   return (
-    <div className="w-auto h-10 flex flex-row items-center px-2 text-left">
+    <div className="list-item w-auto h-10 flex flex-row flex-nowrap items-center px-2 text-left">
       <LightningIcon />
-      <span className="uppercase text-white text-18">{children}</span>
+      <span className="uppercase text-white text-18 whitespace-nowrap">{children}</span>
     </div>
   );
 };
@@ -54,12 +54,12 @@ export default function Home() {
               <div className="cta-btns h-auto flex flex-row">
                 <div className="btn w-auto h-auto border border-solid border-2 px-7 py-4">
                   <Link className="" href="./pages/portfolio">
-                    <h1 className="uppercase text-30 font-bold">portfolio</h1>
+                    <h1 className="uppercase text-30 font-bold text-center">portfolio</h1>
                   </Link>
                 </div>
                 <div className="btn w-auto h-auto border border-solid border-2 px-7 py-4">
                   <Link className="" href="./pages/contact">
-                    <h1 className="uppercase text-30 font-bold">contact</h1>
+                    <h1 className="uppercase text-30 font-bold text-center">contact</h1>
                   </Link>
                 </div>
               </div>
@@ -77,18 +77,18 @@ export default function Home() {
             <Title title="portfolio" />
           </div>
           <div className="port-content w-full h-auto flex-col items-center">
-            <a href="pages/portfolio">
+            <Link href="pages/portfolio" className="w-full">
               <PortCard title="rayyan" tags="portfolio | video editor" />
-            </a>
-            <a href="pages/portfolio">
+            </Link>
+            <Link href="pages/portfolio" className="w-full">
               <PortCard title="guilherme" tags="portfolio | video editor" />
-            </a>
-            <a href="pages/portfolio">
+            </Link>
+            <Link href="pages/portfolio" className="w-full">
               <PortCard title="coming soon" tags="" />
-            </a>
-            <a href="pages/portfolio">
+            </Link>
+            <Link href="pages/portfolio" className="w-full">
               <PortCard title="coming soon" tags="" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
