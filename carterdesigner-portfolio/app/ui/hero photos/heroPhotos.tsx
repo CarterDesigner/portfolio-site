@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import "./heroPhotos.css";
 import Image from "next/image";
 import styles from "./heroPhotos.module.css";
 
