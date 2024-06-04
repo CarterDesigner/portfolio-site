@@ -72,6 +72,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <HeroPhotos />
           <div className="bottom w-screen h-auto absolute bottom-0">
             <Adbar />
           </div>

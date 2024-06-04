@@ -27,7 +27,7 @@ function PhotoItem({ file, imageNo }: PhotoProps) {
 
 export default function HeroPhotos() {
   return (
-    <div className="photos w-auto h-auto">
+    <div className={`photos w-auto h-auto ${styles.photos}`}>
       <div className="photos-container w-auto h-auto relative">
         <PhotoItem file="logo" imageNo={1} />
       </div>

@@ -1,5 +1,13 @@
+.photos {
+  display: none;
+}
 .portCard {
   aspect-ratio: 9/16;
   border: solid 1px white;
   width: 100px;
+}
+@media screen and (min-width: 1000px) {
+  .photos {
+    display: flex;
+  }
 }
