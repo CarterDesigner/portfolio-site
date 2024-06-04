@@ -33,6 +33,7 @@ const config: Config = {
       },
       borderRadius: {
         "100px": "100px",
+        "10px": "10px",
       },
       aspectRatio: {
         box: "1",

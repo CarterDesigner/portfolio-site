@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import "./portfolio.css";
@@ -9,8 +11,14 @@ import { textFromBottomScript } from "@/app/scripts/textAnimations";
 import { textFromRightScript } from "@/app/scripts/textAnimations";
 import { textFromLeftScript } from "@/app/scripts/textAnimations";
 import Footer from "@/app/ui/footer/footer";
+import { useEffect, useRef } from "react";
 
 export default function Portfolio() {
+  useEffect(() => {
+    textFromBottomScript();
+    textFromLeftScript();
+    textFromRightScript();
+  }, []);
   return (
     <div className="content w-screen min-h-screen flex flex-col">
       <div className="hero w-screen h-screen relative overflow-hidden">
@@ -31,10 +39,18 @@ export default function Portfolio() {
       </div>
       <div className="portfolio-content w-screen min-h-screen">
         <div className="portfolio-grid w-full h-auto flex-col items-center justify-center">
-          <PortCard title="rayyan" tags="portfolio | video editor" />
-          <PortCard title="guilherme" tags="portfolio | video editor" />
-          <PortCard title="coming soon" tags="" />
-          <PortCard title="coming soon" tags="" />
+          <div className="text-left">
+            <PortCard title="rayyan" tags="portfolio | video editor" />
+          </div>
+          <div className="text-right">
+            <PortCard title="guilherme" tags="portfolio | video editor" />
+          </div>
+          <div className="text-left">
+            <PortCard title="coming soon" tags="" />
+          </div>
+          <div className="text-right">
+            <PortCard title="coming soon" tags="" />
+          </div>
         </div>
       </div>
       <Footer />
