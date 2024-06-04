@@ -16,7 +16,7 @@ function PhotoItem({ file, imageNo }: PhotoProps) {
       className={`photo photo-${imageNo} w-auto h-auto aspect-square rounded-10px absolute ${styles.portCard}`}
     >
       <Image
-        src={`/${file}.png`}
+        src={`../../../public/${file}.png`}
         alt="Carter Designer Photo"
         width={150}
         height={150}
