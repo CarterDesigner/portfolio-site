@@ -356,15 +356,13 @@ body {
   .adbar-content .adbar-title:nth-child(3) {
     display: flex;
   }
-<<<<<<< Updated upstream
   .adbar-content .adbar-title:nth-child(4) {
     display: flex;
   }
   .adbar-content .adbar-title:nth-child(5) {
     display: none;
-=======
+  }
   .hero-title h1 {
     font-size: 70px;
->>>>>>> Stashed changes
   }
 }
