@@ -66,8 +66,8 @@ export default function Portfolio() {
             <div className="me-points w-full h-auto">
               <ul className="points flex flex-col gap-5">
                 <li className="text-white text-25 text-bottom text-center">
-                  My name is Ben Carter and I am from the "colourful" country of
-                  England.
+                  My name is Ben Carter and I am from the &quot; beautiful
+                  &quot; country of England.
                 </li>
                 <li className="text-white text-25 text-bottom text-center">
                   I am a web designer starting to delve into the realms of
@@ -75,8 +75,8 @@ export default function Portfolio() {
                 </li>
                 <li className="text-white text-25 text-bottom text-center">
                   I like to explore creative ways to present content on a
-                  website, whether that's through animations; transitions etc. I
-                  will find a way.
+                  website, whether that&apos;s through animations; transitions
+                  etc. I will find a way.
                 </li>
               </ul>
             </div>
