@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import "./contactGrid.css";
 
 export default function ContactGrid() {
@@ -10,13 +10,15 @@ export default function ContactGrid() {
     message: "",
   });
   const [status, setStatus] = useState<string | null>(null);
-  const handleChange = (e) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/send-email", {
+    const response = await fetch("/api/email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
