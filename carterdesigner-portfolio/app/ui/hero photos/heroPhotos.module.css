@@ -3,8 +3,20 @@
 }
 .portCard {
   aspect-ratio: 9/16;
-  border: solid 1px white;
-  width: 100px;
+  border: solid 1px #ffffff;
+  width: 175px;
+  background-color: #000;
+}
+.portCard:nth-child(1) {
+  transform: rotate(-14deg);
+  translate: -30px -30px;
+}
+.portCard:nth-child(2) {
+  transform: rotate(14deg);
+  translate: 30px -15px;
+}
+.portCard:nth-child(3) {
+  transform: rotate(0);
 }
 @media screen and (min-width: 1000px) {
   .photos {
