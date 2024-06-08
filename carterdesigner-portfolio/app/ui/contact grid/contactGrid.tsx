@@ -43,6 +43,7 @@ export default function ContactGrid() {
           <input
             className="text-white text-20 w-full"
             type="text"
+            name="username"
             placeholder="@username on X / Instagram"
             value={formData.username}
             onChange={handleChange}
