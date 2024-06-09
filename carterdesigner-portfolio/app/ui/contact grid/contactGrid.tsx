@@ -9,29 +9,48 @@ export default function ContactGrid() {
     email: "",
     message: "",
   });
+
   const [status, setStatus] = useState<string | null>(null);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    const result = await response.json();
-    if (result.success) {
-      setStatus("Email sent successfully!");
-    } else {
+
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("Email sent successfully!");
+      } else {
+        setStatus("Failed to send email.");
+      }
+    } catch (error) {
       setStatus("Failed to send email.");
+      console.error("There was an error!", error);
     }
   };
+
   return (
     <form
       className="w-full h-auto flex flex-col items-center"
@@ -39,7 +58,7 @@ export default function ContactGrid() {
     >
       <div className="contact-grid w-full h-auto flex-col items-center justify-center">
         <div className="contact-item name-item w-full h-auto flex flex-col items-start">
-          <label className="text-white uppercase text-25">username</label>
+          <label className="text-white uppercase text-25">Username</label>
           <input
             className="text-white text-20 w-full"
             type="text"
@@ -78,7 +97,7 @@ export default function ContactGrid() {
         className="submit-btn px-2 py-1 border-white border-solid border-2 relative"
         type="submit"
       >
-        <span className="uppercase text-30 relative">submit</span>
+        <span className="uppercase text-30 relative">Submit</span>
       </button>
       {status && <p>{status}</p>}
     </form>
