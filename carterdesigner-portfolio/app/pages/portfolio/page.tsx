@@ -12,12 +12,22 @@ import { textFromRightScript } from "@/app/scripts/textAnimations";
 import { textFromLeftScript } from "@/app/scripts/textAnimations";
 import Footer from "@/app/ui/footer/footer";
 import { useEffect, useRef } from "react";
+import PortfolioDisplay from "@/app/ui/portfolio display/page";
 
 export default function Portfolio() {
   useEffect(() => {
-    textFromBottomScript();
     textFromLeftScript();
     textFromRightScript();
+    const handleScrollResize = () => {
+      textFromLeftScript();
+      textFromRightScript();
+    };
+    window.addEventListener("scroll", handleScrollResize);
+    window.addEventListener("resize", handleScrollResize);
+    return () => {
+      window.removeEventListener("scroll", handleScrollResize);
+      window.removeEventListener("resize", handleScrollResize);
+    };
   }, []);
   return (
     <div className="content w-screen min-h-screen flex flex-col">

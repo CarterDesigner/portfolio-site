@@ -53,8 +53,9 @@ export default function ContactGrid() {
 
   return (
     <form
+      action="https://formsubmit.co/webdesignerben07@gmail.com"
+      method="POST"
       className="w-full h-auto flex flex-col items-center"
-      onSubmit={handleSubmit}
     >
       <div className="contact-grid w-full h-auto flex-col items-center justify-center">
         <div className="contact-item name-item w-full h-auto flex flex-col items-start">
