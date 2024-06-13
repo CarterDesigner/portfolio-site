@@ -12,7 +12,6 @@ import { textFromRightScript } from "@/app/scripts/textAnimations";
 import { textFromLeftScript } from "@/app/scripts/textAnimations";
 import Footer from "@/app/ui/footer/footer";
 import { useEffect, useRef } from "react";
-import PortfolioDisplay from "@/app/ui/portfolio display/page";
 
 export default function Portfolio() {
   useEffect(() => {
