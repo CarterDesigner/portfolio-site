@@ -48,12 +48,16 @@ export default function Portfolio() {
       </div>
       <div className="portfolio-content w-screen min-h-screen">
         <div className="portfolio-grid w-full h-auto flex-col items-center justify-center">
-          <div className="text-left">
-            <PortCard title="rayyan" tags="portfolio | video editor" />
-          </div>
-          <div className="text-right">
-            <PortCard title="guilherme" tags="portfolio | video editor" />
-          </div>
+          <Link href={`https://rayyan-mehmood.com/`} target="_blank">
+            <div className="text-left">
+              <PortCard title="rayyan" tags="portfolio | video editor" />
+            </div>
+          </Link>
+          <Link href={`https://github.com/CarterDesigner/Guilherme`}>
+            <div className="text-right">
+              <PortCard title="guilherme" tags="portfolio | video editor" />
+            </div>
+          </Link>
           <div className="text-left">
             <PortCard title="coming soon" tags="" />
           </div>
