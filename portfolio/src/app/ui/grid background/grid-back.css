@@ -1,0 +1,10 @@
+.tiles {
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  row-gap: 1px;
+  column-gap: 1px;
+}
+.tile {
+  aspect-ratio: 1;
+  background-color: #0f0f0f;
+}

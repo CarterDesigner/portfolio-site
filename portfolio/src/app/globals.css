@@ -20,11 +20,23 @@
   font-family: Nunito;
 }
 html {
-  background-color: #000;
-  height: 200vh;
+  background-color: #0f0f0f;
 }
 .paddingBox {
   padding: 0 5vw;
+}
+.page {
+  width: 100vw;
+  height: auto;
+}
+.page-content {
+  width: 100vw;
+  height: auto;
+}
+.content {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 900px) {

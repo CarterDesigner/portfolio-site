@@ -17,6 +17,7 @@ export default function Footer() {
               alt="Carter Designer Logo"
               width={150}
               height={150}
+              priority={true}
             />
           </Link>
         </div>

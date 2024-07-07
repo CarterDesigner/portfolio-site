@@ -21,12 +21,17 @@
   translate: -110% 0;
   transition: 0.3s ease;
 }
+.dropBtn {
+  display: flex;
+  align-items: center;
+}
 .navBtns {
   width: auto;
   height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  font-size: 22px;
 }
 .navBtns .btn {
   width: auto;
@@ -37,9 +42,58 @@
 .navBtns .btn a {
   height: 100%;
 }
+.navBtn .borderLines {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.1s;
+}
+.navBtn .topRightLines {
+  left: 0;
+  top: 0;
+}
+.navBtn .bottomLeftLines {
+  right: 0;
+  bottom: 0;
+}
+.navBtn:hover .borderLines {
+  animation: borderLines 0.5s ease forwards;
+}
+.navBtn:hover .topRightLines {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+}
+.navBtn:hover .bottomLeftLines {
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+}
+
+@keyframes borderLines {
+  from {
+    width: 0;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 0;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 @media screen and (min-width: 900px) {
   .logoText {
+    display: flex;
+  }
+  .dropBtn {
+    display: none;
+  }
+  .navBtns {
     display: flex;
   }
 }

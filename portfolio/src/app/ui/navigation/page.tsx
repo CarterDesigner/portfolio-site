@@ -6,6 +6,7 @@ import "../../hamburger.css";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../../public/logo.png";
+import { dropBtnScript } from "../../scripts/dropBtn";
 
 interface navBtnProps {
   linkPath: string;
@@ -14,8 +15,10 @@ interface navBtnProps {
 
 function Btn({ linkPath, children }: navBtnProps) {
   return (
-    <div className={`${styles.navBtn} h-ful`}>
-      <Link href={linkPath}>
+    <div className={`${styles.navBtn} relative`}>
+      <div className={`${styles.borderLines} ${styles.topRightLines}`}></div>
+      <div className={`${styles.borderLines} ${styles.bottomLeftLines}`}></div>
+      <Link href={linkPath} className="flex items-center p-3">
         <span className="uppercase">{children}</span>
       </Link>
     </div>
@@ -23,6 +26,12 @@ function Btn({ linkPath, children }: navBtnProps) {
 }
 
 export default function Navigation() {
+  useEffect(() => {
+    const cleanUpHamburger = dropBtnScript();
+    return () => {
+      if (cleanUpHamburger) cleanUpHamburger();
+    };
+  }, []);
   return (
     <div className={`${styles.navigation} navigation w-screen`}>
       <div className="nav-container w-full h-full flex flex-row paddingBox justify-between items-center">
@@ -34,12 +43,20 @@ export default function Navigation() {
                 alt="Carter Designer logo home button"
                 height={100}
                 width={100}
+                priority={true}
               />
             </div>
             <div className={`${styles.logoText} h-full items-center`}>
               <span>CarterDesigner</span>
             </div>
           </Link>
+        </div>
+        <div className={`${styles.dropBtn} w-auto h-full`}>
+          <div className="hamburger hamburger--spin">
+            <div className="hamburger-box">
+              <div className="hamburger-inner"></div>
+            </div>
+          </div>
         </div>
         <div className={`${styles.navBtns} w-auto h-full`}>
           <Btn linkPath="/about">about</Btn>
